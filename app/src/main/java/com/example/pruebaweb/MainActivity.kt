@@ -1,8 +1,10 @@
 package com.example.pruebaweb
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebSettings
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        web.loadUrl("https://www.google.com/")
+        web.loadUrl("https://www.psa.com.ar/")
+
+        val webSettings: WebSettings = web.settings
+        webSettings.javaScriptEnabled = true
+        web.webViewClient = myWebViewClient()
+
     }
 }
