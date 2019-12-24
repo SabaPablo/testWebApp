@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        web.loadUrl("https://www.psa.com.ar/")
+        web.loadUrl("https://mi.psa.com.ar/")
 
         val webSettings: WebSettings = web.settings
         webSettings.javaScriptEnabled = true
